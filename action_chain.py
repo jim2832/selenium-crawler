@@ -6,7 +6,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 PATH = "/usr/local/bin/chromedriver"
 
 driver = webdriver.Chrome(PATH) #使用chrome作為瀏覽器
-driver.get("https://tsj.tw/")
+driver.get("https://tsj.tw/") #取得網址
 
 blow = driver.find_element_by_id("click") #按鈕標籤
 blow_count = driver.find_element_by_xpath('//*[@id="app"]/div[2]/div[4]/div[2]/h4[2]') #因為裡面有雙引號，所以外層的要改成單引號
