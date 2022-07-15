@@ -23,6 +23,7 @@ WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.CLASS_NAME , "sc-f860e6e9-1"))
     )
 
+#標題
 titles = driver.find_elements_by_class_name("sc-417133b6-3")
 for title in titles: 
     print(title.text)
