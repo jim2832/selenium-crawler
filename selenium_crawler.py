@@ -11,7 +11,6 @@ driver = webdriver.Chrome(PATH) #使用chrome作為瀏覽器
 driver.get("https://www.dcard.tw/f") #前往指定的網頁
 
 # print(driver.title) <- 印出標題
-# driver.quit <- 關閉網頁
 
 search = driver.find_element_by_name("query") #尋找input標籤
 search.clear() #先清空搜尋內容(以防有預設文字)
@@ -30,9 +29,13 @@ for title in titles:
 
 link = driver.find_element_by_link_text("#請益 教授推薦信") #找到某篇文章
 link.click() #執行點擊動作
+time.sleep(3)
 driver.back() #回到上一頁
+time.sleep(3)
 driver.back()
+time.sleep(3)
 driver.forward() #下一頁
+time.sleep(3)
 
 time.sleep(5)
-driver.quit()
+driver.quit() #關閉網頁
