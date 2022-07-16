@@ -26,9 +26,6 @@ order_button = driver.find_element_by_xpath('//*[@id="a_irs"]')
 order_button.click()
 
 #選取起始和終點站
-WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CLASS_NAME , "input-smalllabel"))
-    )
 start_station = Select(driver.find_element_by_id("select_location01")) #起始站
 start_station.select_by_index(1) #選取台北站
 
