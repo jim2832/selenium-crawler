@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
-import wget #可以再往網路下載東西
+import wget #可以在網路下載東西
 
 PATH = "/usr/local/bin/chromedriver"
 
@@ -57,9 +57,23 @@ search.send_keys(Keys.RETURN) #按下Enter
 WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.CLASS_NAME, "FFVAD"))
     )
+
+#滑動滾輪
+for i in range(5):
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(5)
+
+#檔案路徑
+path = os.path.join(keyword)
+os.mkdir(path)
+
+count = 0
 imgs = driver.find_element_by_class_name("FFVAD")
 for img in imgs:
-    print(img.get_attribute("src"))
+    save_as = os.path.join(path, keyword + str(count) + ".jpg")
+    #print(img.get_attribute("src"))
+    wget.download(img.get_attribute("src"), save_as)
+    count+=1
 
 time.sleep(5)
 driver.quit()
