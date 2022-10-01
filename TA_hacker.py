@@ -57,8 +57,9 @@ prompt.accept()
 time.sleep(10)
 
 #開始上課
-# start_class = driver.find_element_by_id("ta003")
-# start_class.click()
+start_class = driver.find_element_by_id("ta002")
+time.sleep(5)
+start_class.click()
 
 video = driver.find_element_by_xpath('/html/body/div/iframe')
 video_action = ActionChains(driver)
