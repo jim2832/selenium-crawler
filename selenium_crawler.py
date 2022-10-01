@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-PATH = "/usr/local/bin/chromedriver"
+PATH = "/usr/local/bin/chromedriver2"
 
 driver = webdriver.Chrome(PATH) #使用chrome作為瀏覽器
 driver.get("https://www.dcard.tw/f") #前往指定的網頁

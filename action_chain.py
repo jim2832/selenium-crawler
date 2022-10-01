@@ -3,7 +3,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
-PATH = "/usr/local/bin/chromedriver"
+PATH = "/usr/local/bin/chromedriver2"
 
 driver = webdriver.Chrome(PATH) #使用chrome作為瀏覽器
 driver.get("https://tsj.tw/") #取得網址
