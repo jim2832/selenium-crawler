@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select #操作下拉式選單
 import time
 
-PATH = "/usr/local/bin/chromedriver"
+PATH = "/usr/local/bin/chromedriver2"
 
 driver = webdriver.Chrome(PATH) #使用chrome作為瀏覽器
 driver.get("https://www.thsrc.com.tw/") #前往指定的網頁
